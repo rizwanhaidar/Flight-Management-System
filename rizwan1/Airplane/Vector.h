@@ -1,0 +1,224 @@
+#pragma once
+
+
+//Templatized Class of Vector
+template <class T>
+class  Vector
+{
+public:
+
+	typedef T* iterator;//Iterator
+
+	Vector();//constructor
+	Vector(unsigned int size);//Overloaded constructor
+	Vector(unsigned int size, const T& initial);//Overloaded Constructor
+	Vector(const Vector<T>& v);//Copy constructor
+	~Vector();//destructor
+	void print();
+	unsigned int capacity() const;//Returns Capacity
+	unsigned int Size() const;//Returns current Size
+	bool empty() const;//IS empty
+	iterator begin();//Start
+	iterator end();//end
+	T& front();//front
+	T& back();//back
+	void push_back(const T& value);//insert
+	void pop_back();//delete
+	void reverse();//reverse the whole Vector
+	void reserve(unsigned int capacity);//
+	void resize(unsigned int size);//
+	int find(T a);//finds an element in the Vector
+	T& operator[](unsigned int index);//Index operator
+	Vector<T>& operator=(const Vector<T>&);//assignment operator
+	void clear();//clears the whole vector
+private:
+	unsigned int my_size;//current size
+	unsigned int my_capacity;//total capacity
+	T* buffer;//Main array
+};
+//***************Functions Implementation Starts Here*************************//
+
+//***************  Constructor  ************************//
+template<class T>
+Vector<T>::Vector()
+{
+	my_capacity = 0;
+	my_size = 0;
+	buffer = 0;
+}
+
+template<class T>
+Vector<T>::Vector(const Vector<T>& v)
+{
+	my_size = v.my_size;
+	my_capacity = v.my_capacity;
+	buffer = new T[my_size];
+	for (unsigned int i = 0; i < my_size; i++)
+		buffer[i] = v.buffer[i];
+}
+
+template<class T>
+Vector<T>::Vector(unsigned int size)
+{
+	my_capacity = size;
+	my_size = size;
+	buffer = new T[size];
+}
+
+template<class T>
+Vector<T>::Vector(unsigned int size, const T& initial)
+{
+	my_size = size;
+	my_capacity = size;
+	buffer = new T[size];
+	for (unsigned int i = 0; i < size; i++)
+		buffer[i] = initial;
+}
+
+/***********************AssignMent & Index Operator*********************/
+template<class T>
+Vector<T>& Vector<T>::operator = (const Vector<T>& v)
+{
+	delete[] buffer;
+	my_size = v.my_size;
+	my_capacity = v.my_capacity;
+	buffer = new T[my_size];
+	for (unsigned int i = 0; i < my_size; i++)
+		buffer[i] = v.buffer[i];
+	return *this;
+}
+template<class T>
+T& Vector<T>::operator[](unsigned int index)
+{
+	return buffer[index];
+}
+
+//*************** Iterators at start and at end ************************//
+template<class T>
+typename Vector<T>::iterator Vector<T>::begin()
+{
+	return buffer;
+}
+
+template<class T>
+typename Vector<T>::iterator Vector<T>::end()
+{
+	return buffer + Size();
+}
+
+//***************Values from start and end *************************//
+template<class T>
+T& Vector<T>::front()
+{
+	return buffer[0];
+}
+
+template<class T>
+T& Vector<T>::back()
+{
+	return buffer[my_size - 1];
+}
+
+//*************** Insertion and deletion *************************//
+
+template<class T>
+void Vector<T>::push_back(const T& v)
+{
+	if (my_size >= my_capacity)
+		reserve(my_capacity + 5);
+	buffer[my_size++] = v;
+}
+
+
+template<class T>
+void Vector<T>::pop_back()
+{
+	my_size--;
+}
+
+template<class T>
+void Vector<T>::reserve(unsigned int capacity)
+{
+	if (buffer == 0)
+	{
+		my_size = 0;
+		my_capacity = 0;
+	}
+	T* Newbuffer = new T[capacity];
+	//assert(Newbuffer);
+	unsigned int l_Size = capacity < my_size ? capacity : my_size;
+	//copy (buffer, buffer + l_Size, Newbuffer);
+
+	for (unsigned int i = 0; i < l_Size; i++)
+		Newbuffer[i] = buffer[i];
+
+	my_capacity = capacity;
+	delete[] buffer;
+	buffer = Newbuffer;
+}
+
+/*************Size***************/
+
+template<class T>
+unsigned int Vector<T>::Size()const//
+{
+	return my_size;
+}
+
+//*************** Resize *************************//
+template<class T>
+void Vector<T>::resize(unsigned int size)
+{
+	reserve(size);
+	my_size = size;
+}
+
+/*************** capacity*****************/
+template<class T>
+unsigned int Vector<T>::capacity()const
+{
+	return my_capacity;
+}
+
+/*******************Destructor****************/
+template<class T>
+Vector<T>::~Vector()
+{
+	delete[] buffer;
+}
+/************************Clears the Vector*****************/
+template <class T>
+void Vector<T>::clear()
+{
+	my_capacity = 0;
+	my_size = 0;
+	buffer = 0;
+}
+
+/****************Finds the value in buffer*************/
+template<class T>
+int Vector<T>::find(T a) {
+	for (int i = 0; i < my_capacity; i++) {
+		if (a == buffer[i]) {
+			return 1;
+		}
+
+	}
+	return -1;
+}
+/*********************Reverse the buffer*************/
+template<class T>
+void  Vector<T>::reverse() {
+
+	for (int i = 0; i < Size() / 2; i++)
+		swap(buffer[i], buffer[Size() - i - 1]);
+}
+
+/****************** Printing Function ************/
+template<class T>
+void Vector<T>::print() {
+	cout << endl;
+	for (int i = 0; i < Size(); i++) {
+		cout << buffer[i] << endl;
+	}
+}

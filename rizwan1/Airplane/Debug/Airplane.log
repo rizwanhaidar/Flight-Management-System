@@ -1,0 +1,39 @@
+﻿  Source.cpp
+C:\Users\rizwa\Desktop\rizwan1\Airplane\List.h(276,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(534,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(550,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(575,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(602,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(609,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(670,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(832,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(860,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(871,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(873,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(897,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(925,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(936,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(938,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(962,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(990,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1001,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1003,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1027,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1055,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1067,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1069,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Graph.h(1087,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(142,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(154,15): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(154,11): warning C4309: '=': truncation of constant value
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(163,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(216,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(241,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(325,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(334,29): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Vector.h(221,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Vector.h(219): message : while compiling class template member function 'void Vector<std::string>::print(void)'
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(266): message : see reference to function template instantiation 'void Vector<std::string>::print(void)' being compiled
+C:\Users\rizwa\Desktop\rizwan1\Airplane\List.h(13): message : see reference to class template instantiation 'Vector<std::string>' being compiled
+C:\Users\rizwa\Desktop\rizwan1\Airplane\Source.cpp(147): warning C4715: 'get_city_start': not all control paths return a value
+  Airplane.vcxproj -> C:\Users\rizwa\Desktop\rizwan1\Debug\Airplane.exe
